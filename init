@@ -1,0 +1,7 @@
+git clone https://github.com/Narabzad/elr_files.git
+cd elr_files-master/pylucene-4.9.0-0-src/jcc
+python setup.py build
+python setup.py install
+cd ..
+make
+make install
