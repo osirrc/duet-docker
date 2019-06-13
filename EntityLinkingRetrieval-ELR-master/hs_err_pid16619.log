@@ -1,0 +1,670 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f56fe5cab6f, pid=16619, tid=0x00007f5702c70740
+#
+# JRE version: OpenJDK Runtime Environment (8.0_212-b03) (build 1.8.0_212-8u212-b03-0ubuntu1.18.04.1-b03)
+# Java VM: OpenJDK 64-Bit Server VM (25.212-b03 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# V  [libjvm.so+0x6aab6f]
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007fffcdf0e000):  JavaThread "main" [_thread_in_vm, id=16619, stack(0x00007fffd4b9b000,0x00007fffd4c9b000)]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x0000000000000000
+
+Registers:
+RAX=0x0000000000000000, RBX=0x0000000000000005, RCX=0x0000000000000005, RDX=0x00007fffcdc5c278
+RSP=0x00007fffd4c97a40, RBP=0x00007fffd4c97b90, RSI=0x00007fffcdf0e000, RDI=0x00007fffcdf0e000
+R8 =0x00007f56fee600c0, R9 =0x0000000000000000, R10=0x00007fffce08b620, R11=0x00007f56fea2248c
+R12=0x0000000000000000, R13=0x00007fffcdf0e000, R14=0x00007fffcdf0e1e0, R15=0x00007fffd4c97ba0
+RIP=0x00007f56fe5cab6f, EFLAGS=0x0000000000010206, CSGSFS=0x00000053002b0033, ERR=0x0000000000000000
+  TRAPNO=0x0000000000000000
+
+Top of Stack: (sp=0x00007fffd4c97a40)
+0x00007fffd4c97a40:   00000000000003d8 00007fffcdd1b790
+0x00007fffd4c97a50:   00007fffcdc5c2a0 5bfcd39d5e981d00
+0x00007fffd4c97a60:   0000000000000000 00007fffcdf0e000
+0x00007fffd4c97a70:   0000000000000001 00007fffcdf0e1e0
+0x00007fffd4c97a80:   00007fffcdf0e000 0000000000000000
+0x00007fffd4c97a90:   00007fffd4c97ad0 00007f56fe5f0880
+0x00007fffd4c97aa0:   00007f56ff46c008 00007fffce08fc08
+0x00007fffd4c97ab0:   00007f00d4c97ae0 00007fffcdf0e000
+0x00007fffd4c97ac0:   00007fffcdf0e000 00007fffcdc5c270
+0x00007fffd4c97ad0:   00007fff000000c7 00007f56fea5a3b8
+0x00007fffd4c97ae0:   00007fffd4c97b90 00007f56fe5b9c34
+0x00007fffd4c97af0:   00007fffd4c97b40 00007fffd4c97b30
+0x00007fffd4c97b00:   00007fffce08b620 00007fffcdf0e000
+0x00007fffd4c97b10:   00007fffd4c97b90 00007f56fe5b9759
+0x00007fffd4c97b20:   00007fffcdc5c278 00007f56e98a3e50
+0x00007fffd4c97b30:   00007fffcdf0e000 00007fffcdc5c270
+0x00007fffd4c97b40:   00007f56000000c7 00007f56fea5a3b8
+0x00007fffd4c97b50:   00007fffcdce91f0 5bfcd39d5e981d00
+0x00007fffd4c97b60:   00007fffd4c97b90 00007fffcdf0e1e0
+0x00007fffd4c97b70:   00007fffd4c97cc0 00007fffd4c97c80
+0x00007fffd4c97b80:   0000000000000001 00007f56fd6edab8
+0x00007fffd4c97b90:   00007f56ff66f6e0 00007f56ff4656db
+0x00007fffd4c97ba0:   00007f56ff46c0fe 00007f56ff46c10b
+0x00007fffd4c97bb0:   00007f56ff465e90 00007f56ff46c10f
+0x00007fffd4c97bc0:   00007f56ff46c10b 00007f56ff466060
+0x00007fffd4c97bd0:   00007f56ff46c11e 00007f56ff46c12b
+0x00007fffd4c97be0:   00007f56ff465da0 00007f56ff46c140
+0x00007fffd4c97bf0:   00007f56ff46c12b 00007f56ff465f60
+0x00007fffd4c97c00:   00007f56ff46c150 00007f56ff46c12b
+0x00007fffd4c97c10:   00007f56ff465b90 5bfcd39d5e981d00
+0x00007fffd4c97c20:   00007fffd4c97cc0 00007f56ff4669ba
+0x00007fffd4c97c30:   00007f5702bf4108 00007f56fd716c0c 
+
+Instructions: (pc=0x00007f56fe5cab6f)
+0x00007f56fe5cab4f:   89 ad 30 ff ff ff 48 c7 85 38 ff ff ff 00 00 00
+0x00007f56fe5cab5f:   00 74 0c 48 8d bd 30 ff ff ff e8 e2 07 2a 00 90
+0x00007f56fe5cab6f:   49 8b 3c 24 e8 08 a6 fd ff 85 db 49 89 c6 0f 8e
+0x00007f56fe5cab7f:   f5 07 00 00 8d 43 ff 48 8d 04 40 49 8d 44 c7 18 
+
+Register to memory mapping:
+
+RAX=0x0000000000000000 is an unknown value
+RBX=0x0000000000000005 is an unknown value
+RCX=0x0000000000000005 is an unknown value
+RDX=0x00007fffcdc5c278 is an unknown value
+RSP=0x00007fffd4c97a40 is pointing into the stack for thread: 0x00007fffcdf0e000
+RBP=0x00007fffd4c97b90 is pointing into the stack for thread: 0x00007fffcdf0e000
+RSI=0x00007fffcdf0e000 is a thread
+RDI=0x00007fffcdf0e000 is a thread
+R8 =0x00007f56fee600c0: <offset 0xf400c0> in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so at 0x00007f56fdf20000
+R9 =0x0000000000000000 is an unknown value
+R10=0x00007fffce08b620 is an unknown value
+R11=0x00007f56fea2248c: <offset 0xb0248c> in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so at 0x00007f56fdf20000
+R12=0x0000000000000000 is an unknown value
+R13=0x00007fffcdf0e000 is a thread
+R14=0x00007fffcdf0e1e0 is an unknown value
+R15=0x00007fffd4c97ba0 is pointing into the stack for thread: 0x00007fffcdf0e000
+
+
+Stack: [0x00007fffd4b9b000,0x00007fffd4c9b000],  sp=0x00007fffd4c97a40,  free space=1010k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0x6aab6f]
+C  [libjcc2.so+0x56db]  registerNatives(JNIEnv_*)+0xdb
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007fffce087800 JavaThread "Service Thread" daemon [_thread_blocked, id=16631, stack(0x00007f56e3ab0000,0x00007f56e3bb1000)]
+  0x00007fffce084000 JavaThread "C1 CompilerThread2" daemon [_thread_blocked, id=16630, stack(0x00007f56e3bc1000,0x00007f56e3cc1000)]
+  0x00007fffce082800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=16629, stack(0x00007f56e3cd1000,0x00007f56e3dd1000)]
+  0x00007fffce07f800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=16628, stack(0x00007f56e3de1000,0x00007f56e3ee1000)]
+  0x00007fffce07e000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=16627, stack(0x00007f56e3ef0000,0x00007f56e3ff1000)]
+  0x00007fffce04b000 JavaThread "Finalizer" daemon [_thread_blocked, id=16626, stack(0x00007f56e81e0000,0x00007f56e82e1000)]
+  0x00007fffce048800 JavaThread "Reference Handler" daemon [_thread_blocked, id=16625, stack(0x00007f56e82f0000,0x00007f56e83f1000)]
+=>0x00007fffcdf0e000 JavaThread "main" [_thread_in_vm, id=16619, stack(0x00007fffd4b9b000,0x00007fffd4c9b000)]
+
+Other Threads:
+  0x00007fffce03f000 VMThread [stack: 0x00007f56e8401000,0x00007f56e8501000] [id=16624]
+  0x00007fffce08a000 WatcherThread [stack: 0x00007f56e39a1000,0x00007f56e3aa1000] [id=16632]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+heap address: 0x00000005c1a00000, size: 8166 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x00000007c0000000
+
+Heap:
+ PSYoungGen      total 153088K, used 5263K [0x0000000715e00000, 0x0000000720880000, 0x00000007c0000000)
+  eden space 131584K, 4% used [0x0000000715e00000,0x0000000716323d98,0x000000071de80000)
+  from space 21504K, 0% used [0x000000071f380000,0x000000071f380000,0x0000000720880000)
+  to   space 21504K, 0% used [0x000000071de80000,0x000000071de80000,0x000000071f380000)
+ ParOldGen       total 349696K, used 0K [0x00000005c1a00000, 0x00000005d6f80000, 0x0000000715e00000)
+  object space 349696K, 0% used [0x00000005c1a00000,0x00000005c1a00000,0x00000005d6f80000)
+ Metaspace       used 2397K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 253K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x00007f56ebf90000,0x00007f56ecf84000] byte_map_base: 0x00007f56e9183000
+
+Marking Bits: (ParMarkBitMap*) 0x00007f56fee8c3c0
+ Begin Bits: [0x00007f56bc0d0000, 0x00007f56c4068000)
+ End Bits:   [0x00007f56c4068000, 0x00007f56cc000000)
+
+Polling page: 0x00007f5702c20000
+
+CodeCache: size=245760Kb used=1114Kb max_used=1114Kb free=244645Kb
+ bounds [0x00007f56ed350000, 0x00007f56ed5c0000, 0x00007f56fc350000]
+ total_blobs=268 nmethods=41 adapters=144
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 1.814 Thread 0x00007fffce084000   36       1       java.net.URL::getFile (5 bytes)
+Event: 1.815 Thread 0x00007fffce084000 nmethod 36 0x00007f56ed4654d0 code [0x00007f56ed465620, 0x00007f56ed465730]
+Event: 1.825 Thread 0x00007fffce084000   37  s    1       java.util.Vector::size (5 bytes)
+Event: 1.826 Thread 0x00007fffce084000 nmethod 37 0x00007f56ed465790 code [0x00007f56ed4658e0, 0x00007f56ed465b50]
+Event: 1.826 Thread 0x00007fffce084000   38       3       java.lang.ThreadLocal$ThreadLocalMap::access$000 (6 bytes)
+Event: 1.826 Thread 0x00007fffce084000 nmethod 38 0x00007f56ed465bd0 code [0x00007f56ed465d40, 0x00007f56ed465ea8]
+Event: 1.826 Thread 0x00007fffce084000   39       3       java.lang.ThreadLocal$ThreadLocalMap::getEntry (42 bytes)
+Event: 1.826 Thread 0x00007fffce084000 nmethod 39 0x00007f56ed465f90 code [0x00007f56ed466100, 0x00007f56ed466408]
+Event: 1.862 Thread 0x00007fffce084000   40       3       java.lang.String::startsWith (72 bytes)
+Event: 1.862 Thread 0x00007fffce084000 nmethod 40 0x00007f56ed466550 code [0x00007f56ed4666c0, 0x00007f56ed4669f0]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (9 events):
+Event: 0.821 Thread 0x00007fffcdf0e000 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x0000000715e07cb0) thrown at [/build/openjdk-8-fPix8r/openjdk-8-8u212-b03/src/hotspot/src/share/vm/
+Event: 0.821 Thread 0x00007fffcdf0e000 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x0000000715e07f98) thrown at [/build/openjdk-8-fPix8r/openjdk-8-8u212-b03/src/hotspot/src/share/vm/prims/jni.cpp, lin
+Event: 1.234 Thread 0x00007fffcdf0e000 Exception <a 'java/util/zip/ZipException'> (0x0000000715e64e58) thrown at [/build/openjdk-8-fPix8r/openjdk-8-8u212-b03/src/hotspot/src/share/vm/prims/jni.cpp, line 710]
+Event: 1.234 Thread 0x00007fffcdf0e000 Exception <a 'java/security/PrivilegedActionException'> (0x0000000715e650f8) thrown at [/build/openjdk-8-fPix8r/openjdk-8-8u212-b03/src/hotspot/src/share/vm/prims/jvm.cpp, line 1502]
+Event: 1.234 Thread 0x00007fffcdf0e000 Exception <a 'java/security/PrivilegedActionException'> (0x0000000715e65308) thrown at [/build/openjdk-8-fPix8r/openjdk-8-8u212-b03/src/hotspot/src/share/vm/prims/jvm.cpp, line 1502]
+Event: 1.451 Thread 0x00007fffcdf0e000 Exception <a 'java/security/PrivilegedActionException'> (0x0000000715e6e020) thrown at [/build/openjdk-8-fPix8r/openjdk-8-8u212-b03/src/hotspot/src/share/vm/prims/jvm.cpp, line 1502]
+Event: 1.451 Thread 0x00007fffcdf0e000 Exception <a 'java/security/PrivilegedActionException'> (0x0000000715e6e230) thrown at [/build/openjdk-8-fPix8r/openjdk-8-8u212-b03/src/hotspot/src/share/vm/prims/jvm.cpp, line 1502]
+Event: 1.862 Thread 0x00007fffcdf0e000 Exception <a 'java/lang/NoClassDefFoundError': org/apache/jcc/PythonException> (0x0000000715e956b8) thrown at [/build/openjdk-8-fPix8r/openjdk-8-8u212-b03/src/hotspot/src/share/vm/classfile/systemDictionary.cpp, line 199]
+Event: 1.863 Thread 0x00007fffcdf0e000 Exception <a 'java/lang/NoClassDefFoundError': org/apache/jcc/PythonException> (0x0000000715e99590) thrown at [/build/openjdk-8-fPix8r/openjdk-8-8u212-b03/src/hotspot/src/share/vm/classfile/systemDictionary.cpp, line 199]
+
+Events (10 events):
+Event: 1.234 loading class java/io/IOException done
+Event: 1.234 loading class java/util/zip/ZipException done
+Event: 1.234 loading class java/security/PrivilegedActionException
+Event: 1.234 loading class java/security/PrivilegedActionException done
+Event: 1.451 loading class java/io/FileNotFoundException
+Event: 1.451 loading class java/io/FileNotFoundException done
+Event: 1.862 loading class java/util/concurrent/ConcurrentHashMap$ForwardingNode
+Event: 1.863 loading class java/util/concurrent/ConcurrentHashMap$ForwardingNode done
+Event: 1.863 loading class org/apache/jcc/PythonException
+Event: 1.863 loading class org/apache/jcc/PythonException done
+
+
+Dynamic libraries:
+5c1a00000-5d6f80000 rw-p 00000000 00:00 0
+5d6f80000-715e00000 ---p 00000000 00:00 0
+715e00000-720880000 rw-p 00000000 00:00 0
+720880000-7c0000000 ---p 00000000 00:00 0
+7c0000000-7c0060000 rw-p 00000000 00:00 0
+7c0060000-800000000 ---p 00000000 00:00 0
+7f5698000000-7f5698021000 rw-p 00000000 00:00 0
+7f5698021000-7f569c000000 ---p 00000000 00:00 0
+7f56a0000000-7f56a0027000 rw-p 00000000 00:00 0
+7f56a0027000-7f56a4000000 ---p 00000000 00:00 0
+7f56a4000000-7f56a4021000 rw-p 00000000 00:00 0
+7f56a4021000-7f56a8000000 ---p 00000000 00:00 0
+7f56a8000000-7f56a8021000 rw-p 00000000 00:00 0
+7f56a8021000-7f56ac000000 ---p 00000000 00:00 0
+7f56ac000000-7f56ac021000 rw-p 00000000 00:00 0
+7f56ac021000-7f56b0000000 ---p 00000000 00:00 0
+7f56b0000000-7f56b0021000 rw-p 00000000 00:00 0
+7f56b0021000-7f56b4000000 ---p 00000000 00:00 0
+7f56b4000000-7f56b4021000 rw-p 00000000 00:00 0
+7f56b4021000-7f56b8000000 ---p 00000000 00:00 0
+7f56b8000000-7f56b8021000 rw-p 00000000 00:00 0
+7f56b8021000-7f56bc000000 ---p 00000000 00:00 0
+7f56bc0d0000-7f56cc021000 rw-p 00000000 00:00 0
+7f56cc021000-7f56d0000000 ---p 00000000 00:00 0
+7f56d0000000-7f56d0021000 rw-p 00000000 00:00 0
+7f56d0021000-7f56d4000000 ---p 00000000 00:00 0
+7f56d4000000-7f56d4021000 rw-p 00000000 00:00 0
+7f56d4021000-7f56d8000000 ---p 00000000 00:00 0
+7f56dc000000-7f56dc021000 rw-p 00000000 00:00 0
+7f56dc021000-7f56e0000000 ---p 00000000 00:00 0
+7f56e39a0000-7f56e39a1000 ---p 00000000 00:00 0
+7f56e39a1000-7f56e3aa1000 rw-p 00000000 00:00 0
+7f56e3ab0000-7f56e3ab3000 ---p 00000000 00:00 0
+7f56e3ab3000-7f56e3bb1000 rw-p 00000000 00:00 0
+7f56e3bc0000-7f56e3bc4000 ---p 00000000 00:00 0
+7f56e3bc4000-7f56e3cc1000 rw-p 00000000 00:00 0
+7f56e3cd0000-7f56e3cd4000 ---p 00000000 00:00 0
+7f56e3cd4000-7f56e3dd1000 rw-p 00000000 00:00 0
+7f56e3de0000-7f56e3de4000 ---p 00000000 00:00 0
+7f56e3de4000-7f56e3ee1000 rw-p 00000000 00:00 0
+7f56e3ef0000-7f56e3ef3000 ---p 00000000 00:00 0
+7f56e3ef3000-7f56e3ff1000 rw-p 00000000 00:00 0
+7f56e4000000-7f56e4021000 rw-p 00000000 00:00 0
+7f56e4021000-7f56e8000000 ---p 00000000 00:00 0
+7f56e8011000-7f56e8029000 r--s 00103000 00:00 8101233            /usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/hppc-0.8.1.jar
+7f56e8029000-7f56e803b000 r--s 00185000 00:00 8101234            /usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/lucene-analyzers-common-7.7.1.jar
+7f56e803b000-7f56e806d000 r--s 002c1000 00:00 8101237            /usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/lucene-core-7.7.1.jar
+7f56e806d000-7f56e81e0000 r--p 00000000 00:00 7471365            /usr/lib/locale/C.UTF-8/LC_COLLATE
+7f56e81e0000-7f56e81e3000 ---p 00000000 00:00 0
+7f56e81e3000-7f56e82e1000 rw-p 00000000 00:00 0
+7f56e82f0000-7f56e82f3000 ---p 00000000 00:00 0
+7f56e82f3000-7f56e83f1000 rw-p 00000000 00:00 0
+7f56e8400000-7f56e8401000 ---p 00000000 00:00 0
+7f56e8401000-7f56e8501000 rw-p 00000000 00:00 0
+7f56e8510000-7f56e8611000 rw-p 00000000 00:00 0
+7f56e8620000-7f56e8721000 rw-p 00000000 00:00 0
+7f56e8730000-7f56e8831000 rw-p 00000000 00:00 0
+7f56e8840000-7f56e8941000 rw-p 00000000 00:00 0
+7f56e8950000-7f56e8a51000 rw-p 00000000 00:00 0
+7f56e8a60000-7f56e8b61000 rw-p 00000000 00:00 0
+7f56e8b70000-7f56e8c71000 rw-p 00000000 00:00 0
+7f56e8c80000-7f56e8d81000 rw-p 00000000 00:00 0
+7f56e8d90000-7f56e8e91000 rw-p 00000000 00:00 0
+7f56e8ea0000-7f56e8fa1000 rw-p 00000000 00:00 0
+7f56e8fb0000-7f56e90b1000 rw-p 00000000 00:00 0
+7f56e90c0000-7f56e91c1000 rw-p 00000000 00:00 0
+7f56e91d0000-7f56e92d1000 rw-p 00000000 00:00 0
+7f56e92e0000-7f56e93e1000 rw-p 00000000 00:00 0
+7f56e93f0000-7f56e94f1000 rw-p 00000000 00:00 0
+7f56e9500000-7f56e954e000 rw-p 00000000 00:00 0
+7f56e9551000-7f56e9720000 r--s 03c3b000 00:00 8067012            /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar
+7f56e9720000-7f56e9796000 rw-p 00000000 00:00 0
+7f56e97a0000-7f56e97fb000 rw-p 00000000 00:00 0
+7f56e9800000-7f56e9c00000 rw-p 00000000 00:00 0
+7f56e9c00000-7f56ea000000 ---p 00000000 00:00 0
+7f56ea000000-7f56eaff3000 rw-p 00000000 00:00 0
+7f56eb000000-7f56eb0a0000 rw-p 00000000 00:00 0
+7f56eb0a0000-7f56eb0a1000 ---p 00000000 00:00 0
+7f56eb0a1000-7f56eb1a1000 rw-p 00000000 00:00 0
+7f56eb1b0000-7f56eb1b1000 ---p 00000000 00:00 0
+7f56eb1b1000-7f56eb2b1000 rw-p 00000000 00:00 0
+7f56eb2c0000-7f56eb2c1000 ---p 00000000 00:00 0
+7f56eb2c1000-7f56eb3c1000 rw-p 00000000 00:00 0
+7f56eb3d0000-7f56eb3d1000 ---p 00000000 00:00 0
+7f56eb3d1000-7f56eb4d1000 rw-p 00000000 00:00 0
+7f56eb4e0000-7f56eb58b000 rw-p 00000000 00:00 0
+7f56eb58b000-7f56ebf82000 ---p 00000000 00:00 0
+7f56ebf90000-7f56ec03b000 rw-p 00000000 00:00 0
+7f56ec03b000-7f56eca32000 ---p 00000000 00:00 0
+7f56eca32000-7f56eca88000 rw-p 00000000 00:00 0
+7f56eca88000-7f56ecf83000 ---p 00000000 00:00 0
+7f56ecf83000-7f56ecf84000 rw-p 00000000 00:00 0
+7f56ecf90000-7f56ecf9a000 rw-p 00000000 00:00 0
+7f56ecf9a000-7f56ed350000 ---p 00000000 00:00 0
+7f56ed350000-7f56ed5c0000 rwxp 00000000 00:00 0
+7f56ed5c0000-7f56fc350000 ---p 00000000 00:00 0
+7f56fc350000-7f56fc358000 r-xp 00000000 00:00 8066969            /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7f56fc358000-7f56fc359000 ---p 00008000 00:00 8066969            /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7f56fc359000-7f56fc557000 ---p 00000009 00:00 8066969            /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7f56fc557000-7f56fc558000 r--p 00007000 00:00 8066969            /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7f56fc558000-7f56fc559000 rw-p 00008000 00:00 8066969            /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7f56fc560000-7f56fc56b000 r-xp 00000000 00:00 7417226            /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f56fc56b000-7f56fc56c000 ---p 0000b000 00:00 7417226            /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f56fc56c000-7f56fc76a000 ---p 0000000c 00:00 7417226            /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f56fc76a000-7f56fc76b000 r--p 0000a000 00:00 7417226            /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f56fc76b000-7f56fc76c000 rw-p 0000b000 00:00 7417226            /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f56fc76c000-7f56fc772000 rw-p 00000000 00:00 0
+7f56fc780000-7f56fc797000 r-xp 00000000 00:00 7417219            /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f56fc797000-7f56fc798000 ---p 00017000 00:00 7417219            /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f56fc798000-7f56fc996000 ---p 00000018 00:00 7417219            /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f56fc996000-7f56fc997000 r--p 00016000 00:00 7417219            /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f56fc997000-7f56fc998000 rw-p 00017000 00:00 7417219            /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f56fc998000-7f56fc99a000 rw-p 00000000 00:00 0
+7f56fc9a0000-7f56fc9ab000 r-xp 00000000 00:00 7417230            /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f56fc9ab000-7f56fc9ac000 ---p 0000b000 00:00 7417230            /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f56fc9ac000-7f56fcbaa000 ---p 0000000c 00:00 7417230            /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f56fcbaa000-7f56fcbab000 r--p 0000a000 00:00 7417230            /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f56fcbab000-7f56fcbac000 rw-p 0000b000 00:00 7417230            /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f56fcbb0000-7f56fcbb8000 r-xp 00000000 00:00 7417221            /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f56fcbb8000-7f56fcbba000 ---p 00008000 00:00 7417221            /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f56fcbba000-7f56fcdb8000 ---p 0000000a 00:00 7417221            /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f56fcdb8000-7f56fcdb9000 r--p 00008000 00:00 7417221            /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f56fcdb9000-7f56fcdba000 rw-p 00009000 00:00 7417221            /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f56fcdc0000-7f56fcdec000 r-xp 00000000 00:00 8066950            /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7f56fcdec000-7f56fcdee000 ---p 0002c000 00:00 8066950            /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7f56fcdee000-7f56fcfeb000 ---p 0000002e 00:00 8066950            /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7f56fcfeb000-7f56fcfec000 r--p 0002b000 00:00 8066950            /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7f56fcfec000-7f56fcfee000 rw-p 0002c000 00:00 8066950            /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7f56fcff0000-7f56fd000000 r-xp 00000000 00:00 8066968            /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7f56fd000000-7f56fd002000 ---p 00010000 00:00 8066968            /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7f56fd002000-7f56fd1ff000 ---p 00000012 00:00 8066968            /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7f56fd1ff000-7f56fd201000 r--p 0000f000 00:00 8066968            /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7f56fd201000-7f56fd202000 rw-p 00011000 00:00 8066968            /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7f56fd210000-7f56fd217000 r-xp 00000000 00:00 7417720            /lib/x86_64-linux-gnu/librt-2.27.so
+7f56fd217000-7f56fd218000 ---p 00007000 00:00 7417720            /lib/x86_64-linux-gnu/librt-2.27.so
+7f56fd218000-7f56fd416000 ---p 00000008 00:00 7417720            /lib/x86_64-linux-gnu/librt-2.27.so
+7f56fd416000-7f56fd417000 r--p 00006000 00:00 7417720            /lib/x86_64-linux-gnu/librt-2.27.so
+7f56fd417000-7f56fd418000 rw-p 00007000 00:00 7417720            /lib/x86_64-linux-gnu/librt-2.27.so
+7f56fd420000-7f56fd48b000 r-xp 00000000 00:00 8108733            /usr/local/lib/python2.7/dist-packages/JCC-2.18-py2.7-linux-x86_64.egg/jcc/_jcc.so
+7f56fd48b000-7f56fd4a9000 ---p 0006b000 00:00 8108733            /usr/local/lib/python2.7/dist-packages/JCC-2.18-py2.7-linux-x86_64.egg/jcc/_jcc.so
+7f56fd4a9000-7f56fd68a000 ---p 00000089 00:00 8108733            /usr/local/lib/python2.7/dist-packages/JCC-2.18-py2.7-linux-x86_64.egg/jcc/_jcc.so
+7f56fd68a000-7f56fd68c000 r--p 0006a000 00:00 8108733            /usr/local/lib/python2.7/dist-packages/JCC-2.18-py2.7-linux-x86_64.egg/jcc/_jcc.so
+7f56fd68c000-7f56fd692000 rw-p 0006c000 00:00 8108733            /usr/local/lib/python2.7/dist-packages/JCC-2.18-py2.7-linux-x86_64.egg/jcc/_jcc.so
+7f56fd692000-7f56fd694000 rw-p 00000000 00:00 0
+7f56fd6a0000-7f56fd9a0000 rw-p 00000000 00:00 0
+7f56fd9a0000-7f56fdc82000 r-xp 00000000 00:00 7932009            /usr/lib/x86_64-linux-gnu/libpython2.7.so.1.0
+7f56fdc82000-7f56fdcfa000 ---p 002e2000 00:00 7932009            /usr/lib/x86_64-linux-gnu/libpython2.7.so.1.0
+7f56fdcfa000-7f56fde81000 ---p 0000035a 00:00 7932009            /usr/lib/x86_64-linux-gnu/libpython2.7.so.1.0
+7f56fde81000-7f56fde83000 r--p 002e1000 00:00 7932009            /usr/lib/x86_64-linux-gnu/libpython2.7.so.1.0
+7f56fde83000-7f56fdefa000 rw-p 002e3000 00:00 7932009            /usr/lib/x86_64-linux-gnu/libpython2.7.so.1.0
+7f56fdefa000-7f56fdf1d000 rw-p 00000000 00:00 0
+7f56fdf20000-7f56febbd000 r-xp 00000000 00:00 8066972            /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f56febbd000-7f56fec87000 ---p 00c9d000 00:00 8066972            /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f56fec87000-7f56fedbc000 ---p 00000d67 00:00 8066972            /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f56fedbc000-7f56fee50000 r--p 00c9c000 00:00 8066972            /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f56fee50000-7f56fee79000 rw-p 00d30000 00:00 8066972            /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f56fee79000-7f56feea9000 rw-p 00000000 00:00 0
+7f56feeb0000-7f56feec7000 r-xp 00000000 00:00 7417168            /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f56feec7000-7f56feec8000 ---p 00017000 00:00 7417168            /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f56feec8000-7f56ff0c6000 ---p 00000018 00:00 7417168            /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f56ff0c6000-7f56ff0c7000 r--p 00016000 00:00 7417168            /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f56ff0c7000-7f56ff0c8000 rw-p 00017000 00:00 7417168            /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f56ff0d0000-7f56ff249000 r-xp 00000000 00:00 7481466            /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7f56ff249000-7f56ff256000 ---p 00179000 00:00 7481466            /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7f56ff256000-7f56ff449000 ---p 00000186 00:00 7481466            /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7f56ff449000-7f56ff453000 r--p 00179000 00:00 7481466            /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7f56ff453000-7f56ff455000 rw-p 00183000 00:00 7481466            /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7f56ff455000-7f56ff459000 rw-p 00000000 00:00 0
+7f56ff460000-7f56ff46f000 r-xp 00000000 00:00 8088779            /usr/local/lib/python2.7/dist-packages/JCC-3.5-py2.7-linux-x86_64.egg/libjcc2.so
+7f56ff46f000-7f56ff475000 ---p 0000f000 00:00 8088779            /usr/local/lib/python2.7/dist-packages/JCC-3.5-py2.7-linux-x86_64.egg/libjcc2.so
+7f56ff475000-7f56ff66e000 ---p 00000015 00:00 8088779            /usr/local/lib/python2.7/dist-packages/JCC-3.5-py2.7-linux-x86_64.egg/libjcc2.so
+7f56ff66e000-7f56ff66f000 r--p 0000e000 00:00 8088779            /usr/local/lib/python2.7/dist-packages/JCC-3.5-py2.7-linux-x86_64.egg/libjcc2.so
+7f56ff66f000-7f56ff670000 rw-p 0000f000 00:00 8088779            /usr/local/lib/python2.7/dist-packages/JCC-3.5-py2.7-linux-x86_64.egg/libjcc2.so
+7f56ff67d000-7f57010f9000 r-xp 00000000 00:00 8101226            /usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/_lucene.so
+7f57010f9000-7f57012f8000 ---p 01a7c000 00:00 8101226            /usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/_lucene.so
+7f57012f8000-7f5701331000 r--p 01a7b000 00:00 8101226            /usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/_lucene.so
+7f5701331000-7f57014af000 rw-p 01ab4000 00:00 8101226            /usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/_lucene.so
+7f57014af000-7f5701581000 rw-p 00000000 00:00 0
+7f5701586000-7f570158c000 r--s 00044000 00:00 8101227            /usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/antlr4-runtime-4.5.1-1.jar
+7f570158c000-7f5701590000 r--s 00038000 00:00 8101248            /usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/lucene-suggest-7.7.1.jar
+7f5701590000-7f57015d0000 rw-p 00000000 00:00 0
+7f57015d0000-7f57015df000 r-xp 00000000 00:00 7934902            /usr/lib/python2.7/lib-dynload/_json.x86_64-linux-gnu.so
+7f57015df000-7f57015e1000 ---p 0000f000 00:00 7934902            /usr/lib/python2.7/lib-dynload/_json.x86_64-linux-gnu.so
+7f57015e1000-7f57017de000 ---p 00000011 00:00 7934902            /usr/lib/python2.7/lib-dynload/_json.x86_64-linux-gnu.so
+7f57017de000-7f57017df000 r--p 0000e000 00:00 7934902            /usr/lib/python2.7/lib-dynload/_json.x86_64-linux-gnu.so
+7f57017df000-7f57017e0000 rw-p 0000f000 00:00 7934902            /usr/lib/python2.7/lib-dynload/_json.x86_64-linux-gnu.so
+7f57017e0000-7f5701860000 rw-p 00000000 00:00 0
+7f5701860000-7f5701865000 r--s 0002f000 00:00 8101239            /usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/lucene-facet-7.7.1.jar
+7f5701865000-7f5701a00000 r--p 00000000 00:00 7471431            /usr/lib/locale/locale-archive
+7f5701a00000-7f5701b9d000 r-xp 00000000 00:00 7417197            /lib/x86_64-linux-gnu/libm-2.27.so
+7f5701b9d000-7f5701ba0000 ---p 0019d000 00:00 7417197            /lib/x86_64-linux-gnu/libm-2.27.so
+7f5701ba0000-7f5701d9c000 ---p 000001a0 00:00 7417197            /lib/x86_64-linux-gnu/libm-2.27.so
+7f5701d9c000-7f5701d9d000 r--p 0019c000 00:00 7417197            /lib/x86_64-linux-gnu/libm-2.27.so
+7f5701d9d000-7f5701d9e000 rw-p 0019d000 00:00 7417197            /lib/x86_64-linux-gnu/libm-2.27.so
+7f5701d9e000-7f5701da0000 r--s 0000a000 00:00 8101229            /usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/asm-commons-5.1.jar
+7f5701da0000-7f5701dbc000 r-xp 00000000 00:00 7448845            /lib/x86_64-linux-gnu/libz.so.1.2.11
+7f5701dbc000-7f5701dbd000 ---p 0001c000 00:00 7448845            /lib/x86_64-linux-gnu/libz.so.1.2.11
+7f5701dbd000-7f5701fbb000 ---p 0000001d 00:00 7448845            /lib/x86_64-linux-gnu/libz.so.1.2.11
+7f5701fbb000-7f5701fbc000 r--p 0001b000 00:00 7448845            /lib/x86_64-linux-gnu/libz.so.1.2.11
+7f5701fbc000-7f5701fbd000 rw-p 0001c000 00:00 7448845            /lib/x86_64-linux-gnu/libz.so.1.2.11
+7f5701fbd000-7f5701fc0000 r--s 00015000 00:00 8101244            /usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/lucene-misc-7.7.1.jar
+7f5701fc0000-7f5701fc2000 r-xp 00000000 00:00 7448746            /lib/x86_64-linux-gnu/libutil-2.27.so
+7f5701fc2000-7f5701fc3000 ---p 00002000 00:00 7448746            /lib/x86_64-linux-gnu/libutil-2.27.so
+7f5701fc3000-7f57021c1000 ---p 00000003 00:00 7448746            /lib/x86_64-linux-gnu/libutil-2.27.so
+7f57021c1000-7f57021c2000 r--p 00001000 00:00 7448746            /lib/x86_64-linux-gnu/libutil-2.27.so
+7f57021c2000-7f57021c3000 rw-p 00002000 00:00 7448746            /lib/x86_64-linux-gnu/libutil-2.27.so
+7f57021c3000-7f57021c6000 r--s 00468000 00:00 8101235            /usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/lucene-analyzers-kuromoji-7.7.1.jar
+7f57021c6000-7f57021ca000 r--s 00020000 00:00 8101242            /usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/lucene-join-7.7.1.jar
+7f57021ca000-7f57021d0000 r--s 0003f000 00:00 8101247            /usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/lucene-sandbox-7.7.1.jar
+7f57021d0000-7f57021d3000 r-xp 00000000 00:00 7417144            /lib/x86_64-linux-gnu/libdl-2.27.so
+7f57021d3000-7f57021d4000 ---p 00003000 00:00 7417144            /lib/x86_64-linux-gnu/libdl-2.27.so
+7f57021d4000-7f57023d2000 ---p 00000004 00:00 7417144            /lib/x86_64-linux-gnu/libdl-2.27.so
+7f57023d2000-7f57023d3000 r--p 00002000 00:00 7417144            /lib/x86_64-linux-gnu/libdl-2.27.so
+7f57023d3000-7f57023d4000 rw-p 00003000 00:00 7417144            /lib/x86_64-linux-gnu/libdl-2.27.so
+7f57023d4000-7f57023d6000 r--s 0000c000 00:00 8101228            /usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/asm-5.1.jar
+7f57023d6000-7f57023e0000 r--s 00054000 00:00 8101246            /usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/lucene-queryparser-7.7.1.jar
+7f57023e0000-7f57023fa000 r-xp 00000000 00:00 7417644            /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f57023fa000-7f5702404000 ---p 0001a000 00:00 7417644            /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f5702404000-7f57025f9000 ---p 00000024 00:00 7417644            /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f57025f9000-7f57025fa000 r--p 00019000 00:00 7417644            /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f57025fa000-7f57025fb000 rw-p 0001a000 00:00 7417644            /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f57025fb000-7f57025ff000 rw-p 00000000 00:00 0
+7f5702600000-7f57027e7000 r-xp 00000000 00:00 7417087            /lib/x86_64-linux-gnu/libc-2.27.so
+7f57027e7000-7f57027f0000 ---p 001e7000 00:00 7417087            /lib/x86_64-linux-gnu/libc-2.27.so
+7f57027f0000-7f57029e7000 ---p 000001f0 00:00 7417087            /lib/x86_64-linux-gnu/libc-2.27.so
+7f57029e7000-7f57029eb000 r--p 001e7000 00:00 7417087            /lib/x86_64-linux-gnu/libc-2.27.so
+7f57029eb000-7f57029ed000 rw-p 001eb000 00:00 7417087            /lib/x86_64-linux-gnu/libc-2.27.so
+7f57029ed000-7f57029f1000 rw-p 00000000 00:00 0
+7f57029f2000-7f57029f4000 r--s 00010000 00:00 8101238            /usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/lucene-expressions-7.7.1.jar
+7f57029f4000-7f57029fb000 r--s 0003a000 00:00 8101245            /usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/lucene-queries-7.7.1.jar
+7f57029fb000-7f5702a00000 r--s 0002e000 00:00 8101241            /usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/lucene-highlighter-7.7.1.jar
+7f5702a00000-7f5702a26000 r-xp 00000000 00:00 7417007            /lib/x86_64-linux-gnu/ld-2.27.so
+7f5702a26000-7f5702a27000 r-xp 00026000 00:00 7417007            /lib/x86_64-linux-gnu/ld-2.27.so
+7f5702a27000-7f5702a2a000 r--s 00013000 00:00 8101240            /usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/lucene-grouping-7.7.1.jar
+7f5702a2a000-7f5702a45000 r--s 001d6000 00:00 8066988            /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/nashorn.jar
+7f5702a45000-7f5702a60000 r--s 00394000 00:00 8066983            /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/cldrdata.jar
+7f5702a60000-7f5702aa1000 rw-p 00000000 00:00 0
+7f5702aa1000-7f5702aa3000 r--s 0007d000 00:00 8101236            /usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/lucene-analyzers-stempel-7.7.1.jar
+7f5702aa3000-7f5702aa5000 r--s 00003000 00:00 8101232            /usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/extensions.jar
+7f5702aa5000-7f5702aaf000 r--s 00116000 00:00 8066987            /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/localedata.jar
+7f5702aaf000-7f5702ae0000 r--p 00000000 00:00 7471391            /usr/lib/locale/C.UTF-8/LC_CTYPE
+7f5702ae0000-7f5702c20000 rw-p 00000000 00:00 0
+7f5702c20000-7f5702c21000 r--p 00000000 00:00 0
+7f5702c22000-7f5702c24000 r--s 0000b000 00:00 8101243            /usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/lucene-memory-7.7.1.jar
+7f5702c24000-7f5702c27000 r--s 00039000 00:00 8066991            /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunpkcs11.jar
+7f5702c27000-7f5702c28000 r--p 00027000 00:00 7417007            /lib/x86_64-linux-gnu/ld-2.27.so
+7f5702c28000-7f5702c29000 rw-p 00028000 00:00 7417007            /lib/x86_64-linux-gnu/ld-2.27.so
+7f5702c29000-7f5702c2a000 rw-p 00000000 00:00 0
+7f5702c2b000-7f5702c30000 r--s 0003c000 00:00 8066990            /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunjce_provider.jar
+7f5702c30000-7f5702c73000 rw-p 00000000 00:00 0
+7f5702c74000-7f5702c75000 r--s 00010000 00:00 8066992            /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/zipfs.jar
+7f5702c75000-7f5702c77000 r--s 00008000 00:00 8066989            /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunec.jar
+7f5702c77000-7f5702c79000 r--s 00007000 00:00 8068151            /usr/share/java/java-atk-wrapper.jar
+7f5702c79000-7f5702c7a000 r--s 0000a000 00:00 8066986            /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/jaccess.jar
+7f5702c7a000-7f5702c7d000 r--s 0000f000 00:00 8066985            /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/icedtea-sound.jar
+7f5702c7d000-7f5702c7f000 r--s 00001000 00:00 8066984            /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/dnsns.jar
+7f5702c7f000-7f5702c80000 r--p 00000000 00:00 7471424            /usr/lib/locale/C.UTF-8/LC_NUMERIC
+7f5702c80000-7f5702c82000 rw-p 00000000 00:00 0
+7f5702c82000-7f5702c83000 r--p 00000000 00:00 7471429            /usr/lib/locale/C.UTF-8/LC_TIME
+7f5702c83000-7f5702c84000 r--p 00000000 00:00 7471419            /usr/lib/locale/C.UTF-8/LC_MONETARY
+7f5702c84000-7f5702c85000 r--p 00000000 00:00 7471416            /usr/lib/locale/C.UTF-8/LC_MESSAGES/SYS_LC_MESSAGES
+7f5702c85000-7f5702c86000 r--p 00000000 00:00 7471425            /usr/lib/locale/C.UTF-8/LC_PAPER
+7f5702c86000-7f5702c87000 r--p 00000000 00:00 7471421            /usr/lib/locale/C.UTF-8/LC_NAME
+7f5702c87000-7f5702c88000 r--p 00000000 00:00 7471361            /usr/lib/locale/C.UTF-8/LC_ADDRESS
+7f5702c88000-7f5702c90000 rw-s 00000000 00:00 7474961            /tmp/hsperfdata_negar/16619
+7f5702c90000-7f5702c92000 rw-p 00000000 00:00 0
+7f5702c92000-7f5702c93000 r--p 00000000 00:00 7471426            /usr/lib/locale/C.UTF-8/LC_TELEPHONE
+7f5702c93000-7f5702c94000 r--p 00000000 00:00 7471396            /usr/lib/locale/C.UTF-8/LC_MEASUREMENT
+7f5702c94000-7f5702c95000 r--p 00000000 00:00 7471393            /usr/lib/locale/C.UTF-8/LC_IDENTIFICATION
+7f5702c95000-7f5702c9c000 r--s 00000000 00:00 7480668            /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+7f5702e00000-7f5703100000 r-xp 00000000 00:00 7933020            /usr/bin/python2.7
+7f5703100000-7f5703101000 r-xp 00300000 00:00 7933020            /usr/bin/python2.7
+7f5703300000-7f5703302000 r--p 00300000 00:00 7933020            /usr/bin/python2.7
+7f5703302000-7f5703378000 rw-p 00302000 00:00 7933020            /usr/bin/python2.7
+7f5703378000-7f570339c000 rw-p 00000000 00:00 0
+7fffcdbc9000-7fffce225000 rw-p 00000000 00:00 0                  [heap]
+7fffd449b000-7fffd4b9b000 rw-p 00000000 00:00 0                  [stack]
+7fffd4b9b000-7fffd4b9e000 ---p 00000000 00:00 0
+7fffd4b9e000-7fffd4c9b000 rw-p 00000000 00:00 0
+7fffd4e4e000-7fffd4e4f000 r-xp 00000000 00:00 0                  [vdso]
+
+VM Arguments:
+jvm_args: -Djava.awt.headless=true 
+java_command: <unknown>
+java_class_path (initial): /usr/local/lib/python2.7/dist-packages/JCC-2.18-py2.7-linux-x86_64.egg/jcc/classes:/usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/lucene-core-7.7.1.jar:/usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/lucene-analyzers-common-7.7.1.jar:/usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/lucene-memory-7.7.1.jar:/usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/lucene-highlighter-7.7.1.jar:/usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/extensions.jar:/usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/lucene-queries-7.7.1.jar:/usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/lucene-queryparser-7.7.1.jar:/usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/lucene-sandbox-7.7.1.jar:/usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/lucene-analyzers-stempel-7.7.1.jar:/usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/lucene-grouping-7.7.1.jar:/usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/lucene-join-7.7.1.jar:/usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/lucene-facet-7.7.1.jar:/usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/lucene-suggest-7.7.1.jar:/usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/lucene-expressions-7.7.1.jar:/usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/lucene-analyzers-kuromoji-7.7.1.jar:/usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/lucene-misc-7.7.1.jar:/usr/local/lib/python2.7/dist-packages/lucene-7.7.1-py2.7-linux-x86_64.egg/lucene/antlr4-runtime-4.5.1-1.jar:/usr/local/lib/python2.7/dist-packages/lucene-
+Launcher Type: generic
+
+Environment Variables:
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.UbuntuonWindows_1804.2019.521.0_x64__79rhkp1fndgsc:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Windows/System32:/mnt/c/Windows:/mnt/c/Windows/System32/wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:/mnt/c/Program Files/MATLAB/R2016b/runtime/win64:/mnt/c/Program Files/MATLAB/R2016b/bin:/mnt/c/Program Files/MATLAB/R2016b/polyspace/bin:/mnt/c/Windows/System32/OpenSSH:/mnt/c/Program Files/PuTTY:/mnt/c/Users/narabzad/PycharmProjects/untitled2/venv/Scripts:/mnt/c/Program Files (x86)/Java/jdk1.8.0_211/lib:/mnt/c/Users/narabzad/PycharmProjects/untitled2/venv/Lib/site-packages:/mnt/c/Program Files (x86)/Bitvise SSH Client:/mnt/c/Program Files (x86)/Java/jdk1.8.0_211/bin:/mnt/c/Program Files/PowerShell/6:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Users/narabzad/PycharmProjects/EntityLinkingRetrieval-ELR-master/apache-ant-1.9.14/bin:/mnt/c/Users/narabzad/PycharmProjects/pylucene-7.5.0-src/apache-ant-1.10.6/bin:/mnt/c/cygwin64/bin:/mnt/c/Program Files (x86)/Java/jre1.8.0_211/bin/client:/mnt/c/Program Files (x86)/Java/jre1.8.0_211/bin:/mnt/c/Program Files (x86)/Java/jdk1.8.0_211/lib:/mnt/c/Users/narabzad/AppData/Local/Microsoft/WindowsApps:/mnt/c/Python34/Scripts:/mnt/c/wget:/mnt/c/Users/narabzad/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/narabzad/PycharmProjects/Specificity of Neural Embeddings/L2R/apache-maven-3.6.0/bin:/mnt/c/Users/narabzad/Documents/PowerShell/Scripts:/mnt/c/Users/narabzad/AppData/Local/Programs/EmEditor:/mnt/c/Users/narabzad/Anaconda3:/snap/bin
+SHELL=/bin/bash
+HOSTTYPE=x86_64
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xab5000], sa_mask[0]=11111111111111111111111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xab5000], sa_mask[0]=11111111111111111111111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x8ea970], sa_mask[0]=11111111111111111111111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x8ea970], sa_mask[0]=11111111111111111111111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x8ea970], sa_mask[0]=11111111111111111111111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x8ea970], sa_mask[0]=11111111111111111111111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x8ea820], sa_mask[0]=00000000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0x8eae90], sa_mask[0]=11111111111111111111111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libjvm.so+0x8eae90], sa_mask[0]=11111111111111111111111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.so+0x8eae90], sa_mask[0]=11111111111111111111111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x8eae90], sa_mask[0]=11111111111111111111111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=18.04
+DISTRIB_CODENAME=bionic
+DISTRIB_DESCRIPTION="Ubuntu 18.04.2 LTS"
+
+uname:Linux 4.4.0-17763-Microsoft #379-Microsoft Wed Mar 06 19:16:00 PST 2019 x86_64
+libc:glibc 2.27 NPTL 2.27 
+rlimit: STACK 8192k, CORE 0k, NPROC 7823, NOFILE 65536, AS infinity
+load average:0.52 0.58 0.59
+
+/proc/meminfo:
+MemTotal:       33447220 kB
+MemFree:        25748696 kB
+Buffers:           34032 kB
+Cached:           188576 kB
+SwapCached:            0 kB
+Active:           167556 kB
+Inactive:         157876 kB
+Active(anon):     103104 kB
+Inactive(anon):    17440 kB
+Active(file):      64452 kB
+Inactive(file):   140436 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:      83569976 kB
+SwapFree:       83479632 kB
+Dirty:                 0 kB
+Writeback:             0 kB
+AnonPages:        102824 kB
+Mapped:            71404 kB
+Shmem:             17720 kB
+Slab:              13868 kB
+SReclaimable:       6744 kB
+SUnreclaim:         7124 kB
+KernelStack:        2848 kB
+PageTables:         2524 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:      515524 kB
+Committed_AS:    3450064 kB
+VmallocTotal:     122880 kB
+VmallocUsed:       21296 kB
+VmallocChunk:      66044 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:      2048 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:       12280 kB
+DirectMap4M:      897024 kB
+
+
+CPU:total 4 (initial active 4) (4 cores per cpu, 1 threads per core) family 21 model 16 stepping 1, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, clmul, mmxext, 3dnowpref, lzcnt, sse4a, tsc, tscinvbit, tscinv, bmi1
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: AuthenticAMD
+cpu family	: 21
+model		: 16
+model name	: AMD A10-5700 APU with Radeon(tm) HD Graphics   
+stepping	: 1
+microcode	: 0xffffffff
+cpu MHz		: 3400.000
+cache size	: 2048 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 21
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 popcnt aes xsave osxsave avx f16c hypervisor
+bogomips	: 6800.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: AuthenticAMD
+cpu family	: 21
+model		: 16
+model name	: AMD A10-5700 APU with Radeon(tm) HD Graphics   
+stepping	: 1
+microcode	: 0xffffffff
+cpu MHz		: 3400.000
+cache size	: 2048 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 21
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 popcnt aes xsave osxsave avx f16c hypervisor
+bogomips	: 6800.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: AuthenticAMD
+cpu family	: 21
+model		: 16
+model name	: AMD A10-5700 APU with Radeon(tm) HD Graphics   
+stepping	: 1
+microcode	: 0xffffffff
+cpu MHz		: 3400.000
+cache size	: 2048 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 21
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 popcnt aes xsave osxsave avx f16c hypervisor
+bogomips	: 6800.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: AuthenticAMD
+cpu family	: 21
+model		: 16
+model name	: AMD A10-5700 APU with Radeon(tm) HD Graphics   
+stepping	: 1
+microcode	: 0xffffffff
+cpu MHz		: 3400.000
+cache size	: 2048 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 21
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 popcnt aes xsave osxsave avx f16c hypervisor
+bogomips	: 6800.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 33447220k(25748696k free), swap 83569976k(83479632k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.212-b03) for linux-amd64 JRE (1.8.0_212-8u212-b03-0ubuntu1.18.04.1-b03), built on Apr 26 2019 01:04:36 by "buildd" with gcc 7.3.0
+
+time: Mon Jun 10 18:59:40 2019
+timezone: DST
+elapsed time: 1 seconds (0d 0h 0m 1s)
+
