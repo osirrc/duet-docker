@@ -18,14 +18,22 @@ This docker runs the entity retrieval task on the following models :
 
 
 to run this docker follow these steps:
-1. docker build . 
-2. ./init
-3. you can either run ./index 
-   
-   or
-   
-   download [TERM INDEX](https://gustav1.ux.uis.no/downloads/elr/index7_stopped.tar.bz2) and [URI INDEX](https://gustav1.ux.uis.no/downloads/elr/index7_only_uri.tar.bz2) on your local host and run the docker using mount volume. for example:
+1. Build the docker using : 
+ 
+   docker build . 
+
+2. run the docker.
+
+If you have the [TERM INDEX](https://gustav1.ux.uis.no/downloads/elr/index7_stopped.tar.bz2) and [URI INDEX](https://gustav1.ux.uis.no/downloads/elr/index7_only_uri.tar.bz2) on your local host then run the docker using mount volume. For example:
+
    docker run -it -v path/to/term_index:/index_dir -v path/to/uri_index:/index_dir 
+
+If you want to download the indexed DBPedia terms and URI within the script you can run :
+
+./index
+
+3. run ./init
+   
    
    
 
