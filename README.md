@@ -34,7 +34,6 @@ Or if you want to download the indexed DBPedia terms and URI within the script y
 ```
 docker run -it IMADE_ID
 ./index
-
 ```
 3. run `./init`
    
