@@ -32,8 +32,8 @@ If you have the [TERM INDEX](https://gustav1.ux.uis.no/downloads/elr/index7_stop
 
 Or if you want to download the indexed DBPedia terms and URI within the script you can run :
 ```
-docker run -it IMADE_ID
-./index
+   docker run -it IMADE_ID
+   ./index
 ```
 3. run `./init`
    
