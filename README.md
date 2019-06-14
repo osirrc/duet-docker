@@ -30,7 +30,7 @@ If you have the [TERM INDEX](https://gustav1.ux.uis.no/downloads/elr/index7_stop
    docker run -it -v path/to/term_index:/index_dir -v path/to/uri_index:/index_dir 
 ```
 
-If you want to download the indexed DBPedia terms and URI within the script you can run :
+Or if you want to download the indexed DBPedia terms and URI within the script you can run :
 ```
 ./index
 ```
