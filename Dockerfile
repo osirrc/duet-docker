@@ -1,4 +1,6 @@
-ROM ubuntu
+FROM ubuntu
+WORKDIR /work
+
 RUN apt-get update
 RUN apt-get install -y python2.7
 RUN apt-get install -y python-pip
@@ -21,4 +23,3 @@ COPY init init
 COPY index index
 COPY source.sh /
 RUN ["chmod", "+x", "/index" , "/init"]
-WORKDIR /work
