@@ -16,7 +16,9 @@ RUN apt install -y openjdk-8-jdk openjdk-8-jre
 RUN apt-get install python-dev
 RUN apt-get install -y ivy 
 RUN apt-get update
-COPY init init
-COPY index index
-COPY source.sh source.sh
+
+COPY init /
+COPY index /
+COPY source.sh /
 RUN ["chmod", "+x", "/index" , "/init"]
+WORKDIR /work
