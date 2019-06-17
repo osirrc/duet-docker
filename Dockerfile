@@ -19,3 +19,4 @@ RUN apt-get install -y ivy
 RUN apt-get update
 COPY init init
 COPY index index
+COPY source.sh source.sh
