@@ -18,14 +18,7 @@ RUN apt-get install -y ivy
 RUN apt-get update
 
 COPY init init
-<<<<<<< HEAD
-COPY index indec
+COPY index index
 COPY source.sh /
 RUN ["chmod", "+x", "/index" , "/init"]
 WORKDIR /work
-=======
-COPY index /
-COPY source.sh /
-RUN ["chmod", "+x", "/index" , "/init"]
-WORKDIR /work
->>>>>>> 72d416366bebb1e689bfbc7b559b7bf72d63e672
