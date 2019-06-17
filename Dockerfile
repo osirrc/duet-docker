@@ -22,4 +22,3 @@ RUN apt-get update
 COPY init init
 COPY index index
 COPY source.sh /
-RUN ["chmod", "+x", "/index" , "/init"]
