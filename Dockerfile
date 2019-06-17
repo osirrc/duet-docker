@@ -17,7 +17,7 @@ RUN apt-get install python-dev
 RUN apt-get install -y ivy 
 RUN apt-get update
 
-COPY init /
+COPY init init
 COPY index /
 COPY source.sh /
 RUN ["chmod", "+x", "/index" , "/init"]
