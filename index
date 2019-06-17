@@ -6,8 +6,4 @@ rm index7_only_uri.tar.bz2
 wget https://gustav1.ux.uis.no/downloads/elr/index7_stopped.tar.bz2
 tar xjf index7_stopped.tar.bz2 
 rm index7_stopped.tar.bz2 
-<<<<<<< HEAD
 cd ..
-=======
-cd ..
->>>>>>> 72d416366bebb1e689bfbc7b559b7bf72d63e672
