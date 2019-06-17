@@ -17,3 +17,5 @@ RUN apt install -y openjdk-8-jdk openjdk-8-jre
 RUN apt-get install python-dev
 RUN apt-get install -y ivy 
 RUN apt-get update
+COPY init init
+COPY index index
