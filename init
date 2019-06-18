@@ -1,3 +1,4 @@
+#!/bin/ sh
 source source.sh
 git clone https://github.com/Narabzad/elr_files.git
 rm -R /usr/lib/jvm/java-11-openjdk-amd64/
