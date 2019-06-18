@@ -3,10 +3,8 @@ apt-get install -y git
 echo $PATH
 source source.sh
 git clone https://github.com/Narabzad/elr_files.git
-rm -R /usr/lib/jvm/java-11-openjdk-amd64/
 rm /usr/lib/jvm/default-java
 apt-get install -y ivy
-rm -r /usr/lib/jvm/java-1.11.0-openjdk-amd64
 echo $PATH
 cd elr_files/pylucene-4.9.0-0/jcc
 python setup.py build
