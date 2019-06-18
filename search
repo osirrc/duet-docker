@@ -17,7 +17,7 @@ search_args = args.json["opts"]["search_args"]
 
 
 os.chdir("//elr_files//EntityLinkingRetrieval-ELR-master")
-subprocess.run("python -m nordlys.elr.retrieval_elr {}".format("lm"),shell=True)
+subprocess.run("python -m nordlys.elr.retrieval_elr {} -q {}".format(search_args,topic_path),shell=True)
 
 
 
