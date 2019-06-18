@@ -20,4 +20,5 @@ RUN apt-get update
 COPY init init
 COPY index /
 COPY source.sh /
+RUN ["chmod", "+x", "/index" , "/init"]
 WORKDIR /work
