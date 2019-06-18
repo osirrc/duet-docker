@@ -12,7 +12,6 @@ python setup.py install
 cd ..
 make
 make install
-
 mkdir -p /index_dir/
 cd index_dir/
 wget https://gustav1.ux.uis.no/downloads/elr/index7_only_uri.tar.bz2
