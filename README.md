@@ -35,8 +35,12 @@ to run this docker follow these steps:
   
     valid_models = ["lm", "mlm", "mlm-tc", "mlm-all", "prms", "sdm", "fsdm",
     "lm_elr", "mlm_elr", "mlm-tc_elr", "prms_elr", "sdm_elr", "fsdm_elr"]
+    
     Queries : see Query file example
+    
     Entity linking threshold", default=0.1
+    
     Number of fields, default=10
+    
     Lambdas, comma separated values
    
