@@ -3,5 +3,5 @@ COPY init init
 COPY source.sh source.sh
 COPY search search
 COPY index index
-RUN ["chmod", "+x" , "/init" ,"/search"]
+RUN ["chmod", "+x" , "/init" ,"/search" ,"/index" ]
 
