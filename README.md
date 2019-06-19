@@ -1,6 +1,11 @@
 # OSIRRC Docker Image for Entity Retrieval
 
 [![Build Status](https://travis-ci.com/osirrc/entitylinking-docker.svg?branch=master)](https://travis-ci.com/osirrc/entitylinking-docker)
+
+
+[**Negar Arabzadeh**](https://github.com/narabzad/)
+
+
 This docker runs the entity retrieval task on the following models : 
 
  - "lm"
