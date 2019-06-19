@@ -16,7 +16,16 @@ This docker runs the entity retrieval task on the following models :
  - "sdm_elr"
  - "fsdm_elr"
 
+The following jig command can be used to install the requirements packages and index DBPedia URIs:
 
+pass a dummy collection:
+python run.py prepare \
+    --repo osirrc2019/entitylinking \
+    --collections [name]=[path]=[format] ...
+    
+    
+    
+    
 to run this docker follow these steps:
 1. Build the docker using : 
  ```
