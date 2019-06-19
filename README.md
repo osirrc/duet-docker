@@ -6,6 +6,15 @@
 [**Negar Arabzadeh**](https://github.com/narabzad/)
 
 
+This is the docker image for the Entity Retrieval conforming to the [OSIRRC jig](https://github.com/osirrc/jig/) for the [Open-Source IR Replicability Challenge (OSIRRC) at SIGIR 2019](https://osirrc.github.io/osirrc2019/).
+This image is available on [Docker Hub](https://hub.docker.com/r/osirrc2019/entitylinking).
+The [OSIRRC 2019 image library](https://github.com/osirrc/osirrc2019-library) contains a log of successful executions of this image.
+
++ Supported test collections: 
++ Supported hooks: `init`, `search`
+
+## Quick Start
+
 This docker runs the entity retrieval task on the following models : 
 
  - "lm"
