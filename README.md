@@ -19,27 +19,25 @@ This docker runs the entity retrieval task on the following models :
 The following jig command can be used to install the requirements packages and index DBPedia URIs:
 
 pass a dummy collection:
-python run.py prepare \
+```
+python3 run.py prepare \
     --repo osirrc2019/entitylinking \
-    --collections [name]=[path]=[format] ...
-    
-    
-    
-    
-to run this docker follow these steps:
-1. Build the docker using : 
- ```
-   docker build . 
-   ```
-
-2. run the docker.
-
+    --collections [name]=[path]=[format] 
 ```
-   docker run -it IMADE_ID
+
+The following jig command can be used to perform an entity retrieval run on the DBPedia collection:
 ```
-3. run `./init`
-4. run `./search`
-   
+python run.py search \
+  --repo osirrc2019/anserini \
+  --tag v0.1.1 \
+  --output out/anserini \
+  --qrels qrels/qrels.robust04.txt \
+  --topic topics/topics.robust04.txt \
+  --collection robust04 \
+  --opts search_args="-bm25" out_file_name="run.bm25.robust04"
+```
+    
+    
    parameteres that can be modified : 
   
     valid_models = ["lm", "mlm", "mlm-tc", "mlm-all", "prms", "sdm", "fsdm",
