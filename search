@@ -12,25 +12,13 @@ args, unknown = parser.parse_known_args()
 
 topic_path = args.json["topic"]["path"]
 mod = args.json["opts"]["model"]
-
-if args.json["opts"]["threshold"]:
-    threshold=(args.json["opts"]["threshold"])
-else:
-    threshold='0.1'
+threshold=(args.json["opts"]["threshold"])    
+annotation_file= (args.json["opts"]["annotation"])
+nfields=(args.json["opts"]["nfields"])
     
-if args.json["opts"]["annotation"]:
-    annotiation_file='-a '+ (args.json["opts"]["annotation"])
-else:
-    annotation_file=''
-
-if args.json["opts"]["nfields"]:
-    nfields=(args.json["opts"]["nfields"])
-else:
-    nfields='10'
-    
-    
+print(mod,topic_path,threshold,nfields,annotation_file)
 os.chdir("//elr_files//EntityLinkingRetrieval-ELR-master")
-subprocess.run("python -m nordlys.elr.retrieval_elr {} -q {} -t {} -n {} {} ".format(mod,topic_path,threshold,nfields,annotation_file),shell=True)
+subprocess.run("python -m nordlys.elr.retrieval_elr {} -q {} -t {} -n {} -a{} ".format(mod,topic_path,threshold,nfields,annotation_file),shell=True)
 
 
 
