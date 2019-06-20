@@ -54,7 +54,7 @@ python run.py search \
   --qrels path/to/qrels \
   --topic path/to/queries.json \
   --collection collection_name \
-  --opts model=model_name threshold=Entity_linking_threshold nfields=number_of_fields lambdas=comma,seperated,values,lambdas annotation=path/to/annotaion/file
+  --opts model=model_name threshold=Entity_linking_threshold nfields=number_of_fields lambdas=lambdaE,lambdaU,lambdaO,LambdaT annotation=path/to/annotaion/file
 ```
  For example:
 ```
