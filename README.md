@@ -33,36 +33,54 @@ This docker runs the entity retrieval task on the following models :
 
 The following jig command can be used to install the requirements packages and index DBPedia URIs:
 
-pass a dummy collection:
+pass a dummy collection, this collection is not used in this docker :
 ```
 python3 run.py prepare \
     --repo osirrc2019/entitylinking \
     --collections [name]=[path]=[format] 
 ```
 
+For example :
+```
+python3 run.py prepare \
+    --repo osirrc2019/entitylinking \
+    --collections robust04=path/to/robust004=trecweb 
+```
+
 The following jig command can be used to perform an entity retrieval run on the DBPedia collection:
 ```
 python run.py search \
-  --repo osirrc2019/anserini \
-  --tag v0.1.1 \
-  --output out/anserini \
-  --qrels qrels/qrels.robust04.txt \
-  --topic topics/topics.robust04.txt \
-  --collection robust04 \
-  --opts search_args="-bm25" out_file_name="run.bm25.robust04"
+  --repo osirrc2019/entitylinking \
+  --output out/entitylinking \
+  --qrels path/to/qrels \
+  --topic path/to/queries.json \
+  --collection collection_name \
+  --opts model=model_name threshold=Entity_linking_threshold nfields=number_of_fields lambdas=comma,seperated,values,lambdas annotation=path/to/annotaion/file
 ```
+ For example:
+```
+python run.py search \
+  --repo osirrc2019/entitylinking \
+  --output out/entitylinking \
+  --qrels path/to/qrels \
+  --topic path/to/queries.json \
+  --collection collection_name \
+  --opts model=model_name threshold=Entity_linking_threshold nfields=number_of_fields lambdas=comma,seperated,values,lambdas annotation=path/to/annotaion/file
+``` 
     
-    
-   parameteres that can be modified : 
+   Acceptable values that can be modified : 
   
     valid_models = ["lm", "mlm", "mlm-tc", "mlm-all", "prms", "sdm", "fsdm",
     "lm_elr", "mlm_elr", "mlm-tc_elr", "prms_elr", "sdm_elr", "fsdm_elr"]
     
     Queries : see Query file example
     
-    Entity linking threshold", default=0.1
+    Entity linking threshold:
+    - a float number, default=0.1
     
-    Number of fields, default=10
+    Number of fields
+    - an integer number, default=10
     
-    Lambdas, comma separated values
+    Lambdas
+    - comma separated values for lambdas mentioned in the paper [paper](http://hasibi.com/files/ictir2016-elr.pdf) 
    
