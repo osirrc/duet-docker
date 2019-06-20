@@ -12,10 +12,14 @@ args, unknown = parser.parse_known_args()
 
 topic_path = args.json["topic"]["path"]
 mod = args.json["opts"]["model"]
+if len(args.json["opts"]["threshold"]) > 0:
+  threshold="-t "+(args.json["opts"]["threshold"])
+else:
+  threshold=''
 
 
 os.chdir("//elr_files//EntityLinkingRetrieval-ELR-master")
-subprocess.run("python -m nordlys.elr.retrieval_elr {} -q {}".format(mod,topic_path),shell=True)
+subprocess.run("python -m nordlys.elr.retrieval_elr {} -q {} {} ".format(mod,topic_path,threshold),shell=True)
 
 
 
