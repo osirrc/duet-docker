@@ -85,7 +85,7 @@ python run.py search \
   an integer number, default=10
     
    - Lambdas
-   comma separated values for lambdas mentioned in the paper [paper](http://hasibi.com/files/ictir2016-elr.pdf) 
+   comma separated values for lambdas mentioned in the [paper](http://hasibi.com/files/ictir2016-elr.pdf) 
    
 ## Expected Results
 
