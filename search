@@ -14,7 +14,7 @@ topic_path = args.json["topic"]["path"]
 mod = args.json["opts"]["model"]
 
 try: 
-    threshold='-t '+args.json["opts"]["threshold"])   
+    threshold='-t '+args.json["opts"]["threshold"]
 except:
     threshold=''
 try: 
