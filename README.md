@@ -17,19 +17,18 @@ The [OSIRRC 2019 image library](https://github.com/osirrc/osirrc2019-library) co
 
 This docker runs the entity retrieval task on the following models : 
 
- - "lm"
- - "mlm"
- - "mlm-tc"
- - "mlm-all" 
- - "prms"
- - "sdm" 
- - "fsdm"
- - "lm_elr"
- - "mlm_elr"
- - "mlm-tc_elr"
- - "prms_elr"
- - "sdm_elr"
- - "fsdm_elr"
+ - "lm"[2]
+ - "mlm-tc"[3]
+ - "mlm-all"[4] 
+ - "prms"[5]
+ - "sdm" [6]
+ - "fsdm"[7]
+ - "lm_elr"[1]
+ - "mlm_elr"[1]
+ - "mlm-tc_elr"[1]
+ - "prms_elr"[1]
+ - "sdm_elr"[1]
+ - "fsdm_elr"[1]
 
 The following jig command can be used to install the requirements packages and index DBPedia URIs:
 
@@ -90,5 +89,11 @@ python run.py search \
 ## Expected Results
 
 ## Refrences
-+ F. Hasibi, K. Balog, and S.E. Bratsberg. “Exploiting Entity Linking in Queries for Entity Retrieval”,
+[1] F. Hasibi, K. Balog, and S.E. Bratsberg. “Exploiting Entity Linking in Queries for Entity Retrieval”,
 In proceedings of ACM SIGIR International Conference on the Theory of Information Retrieval (ICTIR ’16), Newark, DE, USA, Sep 2016.
+[2] C. Zhai. Statistical language models for information retrieval a critical review. Found. Trends Inf. Retr., 2:137–213, 2008.
+[3] R. Neumayer, K. Balog, and K. Nørvåg. When simple is (more than) good enough: Effective semantic search with (almost) no semantics. In Proc. of ECIR, pages 540–543, 2012.
+[4] P. Ogilvie and J. Callan. Combining document representations for known-item search. Proc. of SIGIR, pages 143–150, 2003.
+[5] J. Kim, X. Xue, and W. B. Croft. A probabilistic retrieval model for semistructured data. In Proc. of ECIR, pages 228–239, 2009.
+[6] D. Metzler and W. B. Croft. A Markov Random Field model for term dependencies. In Proc. of SIGIR, pages 472–479, 2005. 
+[7] N. Zhiltsov, A. Kotov, and F. Nikolaev. Fielded sequential dependence model for ad-hoc entity retrieval in the Web of Data. In Proc. of SIGIR, pages 253–262, 2015
