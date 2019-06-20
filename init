@@ -18,8 +18,11 @@ mkdir -p /index_dir/
 cd index_dir/
 apt install wget
 wget https://gustav1.ux.uis.no/downloads/elr/index7_only_uri.tar.bz2 https://gustav1.ux.uis.no/downloads/elr/index7_stopped.tar.bz2
+echo "Extracting... 2 left ... "
 tar xjf index7_only_uri.tar.bz2
+echo "Extracting ... 1 left ..."
 rm index7_only_uri.tar.bz2 
 tar xjf index7_stopped.tar.bz2
 rm index7_stopped.tar.bz2
 cd ..
+echo "initialization and indecing done!" 
