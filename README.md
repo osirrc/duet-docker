@@ -91,9 +91,15 @@ python run.py search \
 ## Refrences
 [1] F. Hasibi, K. Balog, and S.E. Bratsberg. “Exploiting Entity Linking in Queries for Entity Retrieval”,
 In proceedings of ACM SIGIR International Conference on the Theory of Information Retrieval (ICTIR ’16), Newark, DE, USA, Sep 2016.
+
 [2] C. Zhai. Statistical language models for information retrieval a critical review. Found. Trends Inf. Retr., 2:137–213, 2008.
+
 [3] R. Neumayer, K. Balog, and K. Nørvåg. When simple is (more than) good enough: Effective semantic search with (almost) no semantics. In Proc. of ECIR, pages 540–543, 2012.
+
 [4] P. Ogilvie and J. Callan. Combining document representations for known-item search. Proc. of SIGIR, pages 143–150, 2003.
+
 [5] J. Kim, X. Xue, and W. B. Croft. A probabilistic retrieval model for semistructured data. In Proc. of ECIR, pages 228–239, 2009.
+
 [6] D. Metzler and W. B. Croft. A Markov Random Field model for term dependencies. In Proc. of SIGIR, pages 472–479, 2005. 
+
 [7] N. Zhiltsov, A. Kotov, and F. Nikolaev. Fielded sequential dependence model for ad-hoc entity retrieval in the Web of Data. In Proc. of SIGIR, pages 253–262, 2015
