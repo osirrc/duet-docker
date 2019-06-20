@@ -34,7 +34,6 @@ print(mod,topic_path,threshold,nfields,annotation_file,lambdas)
 os.chdir("//elr_files//EntityLinkingRetrieval-ELR-master")
 subprocess.run("python -m nordlys.elr.retrieval_elr {} -q {}  {}  {} {}  {}".format(mod,topic_path,threshold,nfields,annotation_file,lambdas),shell=True)
 
-out_file_name = args.json['opts']['out_file_name']
 files = os.listdir('runs')
 for file in files:
 	shutil.copy(os.path.join('runs', file), '/output')
