@@ -87,3 +87,8 @@ python run.py search \
    - Lambdas
    comma separated values for lambdas mentioned in the paper [paper](http://hasibi.com/files/ictir2016-elr.pdf) 
    
+## Expected Results
+
+## Refrences
+F. Hasibi, K. Balog, and S.E. Bratsberg. “Exploiting Entity Linking in Queries for Entity Retrieval”,
+In proceedings of ACM SIGIR International Conference on the Theory of Information Retrieval (ICTIR ’16), Newark, DE, USA, Sep 2016.
