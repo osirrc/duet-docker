@@ -68,19 +68,19 @@ python run.py search \
   --opts model=model_name threshold=Entity_linking_threshold nfields=number_of_fields lambdas=comma,seperated,values,lambdas annotation=path/to/annotaion/file
 ``` 
     
-   Acceptable values that can be modified : 
+  Acceptable values that can be modified : 
   
-    valid_models = ["lm", "mlm", "mlm-tc", "mlm-all", "prms", "sdm", "fsdm",
-    "lm_elr", "mlm_elr", "mlm-tc_elr", "prms_elr", "sdm_elr", "fsdm_elr"]
+   valid_models = ["lm", "mlm", "mlm-tc", "mlm-all", "prms", "sdm", "fsdm",
+   "lm_elr", "mlm_elr", "mlm-tc_elr", "prms_elr", "sdm_elr", "fsdm_elr"]
     
-    Queries : see Query file example
+   Queries : see Query file example
     
-    Entity linking threshold:
-    - a float number, default=0.1
+   Entity linking threshold:
+   - a float number, default=0.1
     
-    Number of fields
-    - an integer number, default=10
+   Number of fields
+   - an integer number, default=10
     
-    Lambdas
-    - comma separated values for lambdas mentioned in the paper [paper](http://hasibi.com/files/ictir2016-elr.pdf) 
+   Lambdas
+   - comma separated values for lambdas mentioned in the paper [paper](http://hasibi.com/files/ictir2016-elr.pdf) 
    
