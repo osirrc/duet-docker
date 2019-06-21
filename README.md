@@ -10,8 +10,8 @@ This is the docker image for the Entity Retrieval conforming to the [OSIRRC jig]
 This image is available on [Docker Hub](https://hub.docker.com/r/osirrc2019/entitylinking).
 The [OSIRRC 2019 image library](https://github.com/osirrc/osirrc2019-library) contains a log of successful executions of this image.
 
-+ Supported test collections: 
-+ Supported hooks: `init`, `search`
++ Supported topics: Any queries.  
++ Supported hooks: `init`, `index`, `search`
 
 ## Quick Start
 
