@@ -1,4 +1,5 @@
 #!/bin/bash
+python -m pip install tagme
 apt-get install -y git
 echo $PATH
 source source.sh
