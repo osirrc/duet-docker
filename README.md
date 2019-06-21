@@ -91,7 +91,25 @@ MAP Score
 
 |    | QALD-2 | INEX-LD | ListSearch | SemSearch | all queries |
 |----|--------|---------|------------|-----------|-----------|
-|MAP |        |         |            |           |           |
+|lm |        |         |            |           |           |
+|mlm |        |         |            |           |           |
+|mlm-tc |        |         |            |           |           |
+|mlm-all |        |         |            |           |           |
+|prms |        |         |            |           |           |
+|sdm |        |         |            |           |           |
+|prms |        |         |            |           |           |
+|fsdm |        |         |            |           |           |
+|lm_elr |        |         |            |           |           |
+|mlm_elr |        |         |            |           |           |
+|mlm-tc_elr |        |         |            |           |           |
+|prms_elr |        |         |            |           |           |
+|sdm_elr |        |         |            |           |           |
+|fsdm_elr |        |         |            |           |           |
+
+
+
+
+
 
 
 ## Refrences
