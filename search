@@ -9,37 +9,37 @@ print("Searching...")
 parser = argparse.ArgumentParser()
 parser.add_argument("--json", type=json.loads, required=True, help="the json input")
 args, unknown = parser.parse_known_args()
-
+topics=args.json["topic"]["path"]
+topics= args.json["topic"]["path"]
 mod = args.json["opts"]["model"]
 
 try: 
     threshold='-t '+args.json["opts"]["threshold"]
 except:
     threshold=''
-try: 
-    annotation_file='-a '+ args.json["opts"]["annotation"]
-except:
-    annotation_file=''
+
 try: 
     nfields='-n '+args.json["opts"]["nfields"]
 except:
     nfields=''
+
 try: 
     lambdas='-l '+ args.json["opts"]["lambdas"]
 except:
     lambdas=''
-try: 
-    query_file='-q '+ args.json["opts"]["query"]
-except:
-    query_file=''
 
-print(mod,query_file,threshold,nfields,annotation_file,lambdas)
+
 os.chdir("//elr_files//EntityLinkingRetrieval-ELR-master")
-subprocess.run("python -m nordlys.elr.retrieval_elr {}  {}  {}  {} {}  {}".format(mod,query_file,threshold,nfields,annotation_file,lambdas),shell=True)
+subprocess.run("python -m nordlys.query_extract_annotate {} ".format(topics),shell=True)
+
+query_file="//elr_files//EntityLinkingRetrieval-ELR-master//data//extracted_queries.json"
+annotaion_file="//elr_files//EntityLinkingRetrieval-ELR-master//data//extracted_annotation.json"
+
+subprocess.run("python -m nordlys.elr.retrieval_elr -q query_file -a annotaion_file {}  {} {}  {}".format(mod,threshold,nfields,lambdas),shell=True)
 
 files = os.listdir('my_runs')
 for file in files:
-	shutil.copy(os.path.join('my_runs', file), '/output')
+    shutil.copy(os.path.join('my_runs', file), '/output')
 
 
 
