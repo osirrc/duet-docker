@@ -89,9 +89,9 @@ python run.py search \
 ## Expected Results
 MAP Score
 
-|    | QALD-2 | INEX-LD | ListSearch | SemSearch |
-|----|--------|---------|------------|-----------|
-|MAP |        |         |            |           |
+|    | QALD-2 | INEX-LD | ListSearch | SemSearch | all queries |
+|----|--------|---------|------------|-----------|-----------|
+|MAP |        |         |            |           |           |
 
 |Metric | Score |
 |----|----|
