@@ -10,7 +10,6 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--json", type=json.loads, required=True, help="the json input")
 args, unknown = parser.parse_known_args()
 
-topic_path = args.json["topic"]["path"]
 mod = args.json["opts"]["model"]
 
 try: 
@@ -29,10 +28,14 @@ try:
     lambdas='-l '+ args.json["opts"]["lambdas"]
 except:
     lambdas=''
-    
+try: 
+    query_file='-q '+ args.json["opts"]["query"]
+except:
+    query_file=''
+
 print(mod,topic_path,threshold,nfields,annotation_file,lambdas)
 os.chdir("//elr_files//EntityLinkingRetrieval-ELR-master")
-subprocess.run("python -m nordlys.elr.retrieval_elr {} -q {}  {}  {} {}  {}".format(mod,topic_path,threshold,nfields,annotation_file,lambdas),shell=True)
+subprocess.run("python -m nordlys.elr.retrieval_elr {}  {}  {}  {} {}  {}".format(mod,query_file,threshold,nfields,annotation_file,lambdas),shell=True)
 
 files = os.listdir('my_runs')
 for file in files:
