@@ -52,9 +52,9 @@ python run.py search \
   --repo osirrc2019/entitylinking \
   --output out/entitylinking \
   --qrels path/to/qrels \
-  --topic path/to/queries.json \
+  --topic dummy/path \
   --collection collection_name \
-  --opts model=model_name threshold=Entity_linking_threshold nfields=number_of_fields lambdas=lambdaE,lambdaU,lambdaO,LambdaT annotation=path/to/annotaion/file
+  --opts model=model_name threshold=Entity_linking_threshold nfields=number_of_fields lambdas=lambdaE,lambdaU,lambdaO,LambdaT annotation=path/to/annotaion/file query=path/to/query/file.json
 ```
  For example:
 ```
@@ -62,9 +62,9 @@ python run.py search \
   --repo osirrc2019/entitylinking \
   --output out/entitylinking \
   --qrels entitylinking-docker/qrels \
-  --topic entitylinking-docker/queries.json \
+  --topic topics.txt \
   --collection robust04 \
-  --opts model=lm
+  --opts model=lm query=queries.json
 ``` 
     
   Acceptable values that can be modified : 
