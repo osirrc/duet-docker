@@ -52,7 +52,7 @@ python run.py search \
   --repo osirrc2019/entitylinking \
   --output out/entitylinking \
   --qrels path/to/qrels \
-  --topic dummy/path \
+  --topic topics.txt \
   --collection collection_name \
   --opts model=model_name threshold=Entity_linking_threshold nfields=number_of_fields lambdas=lambdaE,lambdaU,lambdaO,LambdaT annotation=path/to/annotaion/file query=path/to/query/file.json
 ```
@@ -62,7 +62,7 @@ python run.py search \
   --repo osirrc2019/entitylinking \
   --output out/entitylinking \
   --qrels entitylinking-docker/qrels \
-  --topic topics.txt \
+  --topic topics/topics.robust04.txt \
   --collection robust04 \
   --opts model=lm query=queries.json
 ``` 
