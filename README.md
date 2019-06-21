@@ -88,9 +88,15 @@ python run.py search \
    
 ## Expected Results
 MAP Score
+
 |    | QALD-2 | INEX-LD | ListSearch | SemSearch |
 |----|--------|---------|------------|-----------|
-| MAP |       |         |            |           |
+|MAP |        |         |            |           |
+
+|Metric | Score |
+|----|----|
+| MAP | 0.1415 |
+| P@30 | 0.4080 |
 
 ## Refrences
 [1] F. Hasibi, K. Balog, and S.E. Bratsberg. “Exploiting Entity Linking in Queries for Entity Retrieval”,
