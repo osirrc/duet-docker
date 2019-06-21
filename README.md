@@ -87,11 +87,10 @@ python run.py search \
    comma separated values for lambdas mentioned in the [paper](http://hasibi.com/files/ictir2016-elr.pdf) 
    
 ## Expected Results
-
-
-MAP                                     | BM25      | +QE       | +Prox     | +Prox + QE| DPH | + QE | +Prox | +Prox +QE |  PL2       | +QE       |
-:---------------------------------------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|
-[TREC 2004 Robust Track Topics](http://trec.nist.gov/data/robust/04.testset.gz)| 0.2363 |  0.2762 | 0.2404 | 0.2781  |0.2479|0.2821| 0.2501| 0.2869| 0.2241 | 0.2538
+MAP Score
+|    | QALD-2 | INEX-LD | ListSearch | SemSearch |
+|----|--------|---------|------------|-----------|
+| MAP |       |         |            |           |
 
 ## Refrences
 [1] F. Hasibi, K. Balog, and S.E. Bratsberg. “Exploiting Entity Linking in Queries for Entity Retrieval”,
