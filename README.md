@@ -32,7 +32,7 @@ This docker runs the entity retrieval task on the following models :
 
 The following jig command can be used to install the requirements packages and index DBPedia URIs:
 
-pass a dummy collection, this collection is not used in this docker :
+Pass a dummy collection, this collection is not used in this docker :
 ```
 python3 run.py prepare \
     --repo osirrc2019/entitylinking \
@@ -46,37 +46,22 @@ python3 run.py prepare \
     --collections robust04=path/to/robust004=trecweb 
 ```
 
-The following jig command can be used to perform an entity retrieval run on the DBPedia collection:
+The following jig command can be used to perform an entity retrieval run:
 ```
 python run.py search \
-  --repo osirrc2019/entitylinking \
-  --output out/entitylinking \
-  --qrels path/to/qrels \
-  --topic topics.txt \
-  --collection collection_name \
-  --opts model=model_name threshold=Entity_linking_threshold nfields=number_of_fields lambdas=lambdaE,lambdaU,lambdaO,LambdaT annotation=path/to/annotaion/file query=path/to/query/file.json
-```
- For example:
-```
-python run.py search \
-  --repo osirrc2019/entitylinking \
-  --output out/entitylinking \
-  --qrels entitylinking-docker/qrels \
+  --repo osirrc2019/entityretrieval \
+  --output out/entityretrieval \
+  --qrels qrels/qrels.robust04.txt \
   --topic topics/topics.robust04.txt \
   --collection robust04 \
-  --opts model=lm query=queries.json
-``` 
-    
-  Acceptable values that can be modified : 
+  --opts model=model_name threshold=Entity_linking_threshold nfields=number_of_fields lambdas=lambdaE,lambdaU,lambdaO,LambdaT
+```
+  The arguments model, threshold, nfields and lambdas e can be customized.Acceptable values for the customized arguments are: 
   
-   - valid_models 
+   - model: 
    
      ["lm", "mlm", "mlm-tc", "mlm-all", "prms", "sdm", "fsdm","lm_elr", "mlm_elr", "mlm-tc_elr", "prms_elr", "sdm_elr", "fsdm_elr"]
-    
-  -  Queries : Directory to json query file. Ssee Query file example
-    
-  - Annotarion : Directory to annotaion file. See Tag me annotaion file example  
-  
+      
   -  Entity linking threshold:
   a float number, default=0.1
     
@@ -84,8 +69,8 @@ python run.py search \
   an integer number, default=10
     
    - Lambdas
-   comma separated values for lambdas mentioned in the [paper](http://hasibi.com/files/ictir2016-elr.pdf) 
-   
+   comma separated values for lambdas mentioned in the [paper](http://hasibi.com/files/ictir2016-elr.pdf) e.g, lambdaE,lambdaU,lambdaO,LambdaT
+  
 ## Expected Results
 MAP Score
 
