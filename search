@@ -65,6 +65,8 @@ files = os.listdir('my_runs')
 for file in files:
     shutil.copy(os.path.join('my_runs', file), '/output')
 
-
+files = os.listdir('runs')
+for file in files:
+    shutil.copy(os.path.join('runs', file), '/output')
 
 
