@@ -53,40 +53,15 @@ python run.py search \
    
      ["lm", "mlm", "mlm-tc", "mlm-all", "prms", "sdm", "fsdm","lm_elr", "mlm_elr", "mlm-tc_elr", "prms_elr", "sdm_elr", "fsdm_elr"]
       
-  -  Entity linking threshold:
-  a float number, default=0.1
+  -  threshold:
+  Entity linking threshold which is a float number, default=0.1
     
-  -  Number of fields
-  an integer number, default=10
+  - nfields
+  Number of fields which is an integer number, default=10
     
-   - Lambdas
-   comma separated values for lambdas mentioned in the [paper](http://hasibi.com/files/ictir2016-elr.pdf) e.g, lambdaE,lambdaU,lambdaO,LambdaT
+   - lambdas
+   comma separated values for lambdas mentioned in the [paper](http://hasibi.com/files/ictir2016-elr.pdf) e.g, lambdaE,lambdaU,lambdaO,LambdaT which are float numbers.
   
-## Expected Results
-MAP Score
-
-|    | QALD-2 | INEX-LD | ListSearch | SemSearch | all queries |
-|----|--------|---------|------------|-----------|-----------|
-|lm |        |         |            |           |           |
-|mlm |        |         |            |           |           |
-|mlm-tc |        |         |            |           |           |
-|mlm-all |        |         |            |           |           |
-|prms |        |         |            |           |           |
-|sdm |        |         |            |           |           |
-|prms |        |         |            |           |           |
-|fsdm |        |         |            |           |           |
-|lm_elr |        |         |            |           |           |
-|mlm_elr |        |         |            |           |           |
-|mlm-tc_elr |        |         |            |           |           |
-|prms_elr |        |         |            |           |           |
-|sdm_elr |        |         |            |           |           |
-|fsdm_elr |        |         |            |           |           |
-
-
-
-
-
-
 
 ## Refrences
 [1] F. Hasibi, K. Balog, and S.E. Bratsberg. “Exploiting Entity Linking in Queries for Entity Retrieval”,
