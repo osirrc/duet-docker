@@ -50,7 +50,7 @@ python run.py search \
     - "prms_elr"[1]
     - "sdm_elr"[1]
     - "fsdm_elr"[1]      
-     -  threshold:
+   -  threshold:
   Entity linking threshold which is a float number, default=0.1
     
   - nfields
