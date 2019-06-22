@@ -49,7 +49,7 @@ for file in files:
     shutil.copy(os.path.join('data', file), '/output')
     
 
-sp3 = subprocess.Popen(["python -m nordlys.elr.retrieval_elr -q query_json_file -a annotaion_file {}  {} {}  {}".format(mod,threshold,nfields,lambdas)],shell=True)
+sp3 = subprocess.Popen(["python -m nordlys.elr.retrieval_elr -q {} -a {} {}  {} {}  {}".format(query_json_file,annotaion_file,mod,threshold,nfields,lambdas)],shell=True)
 sp3.wait()
 
 files = os.listdir('my_runs')
