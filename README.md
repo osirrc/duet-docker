@@ -10,7 +10,6 @@ This is the docker image for the Entity Retrieval conforming to the [OSIRRC jig]
 This image is available on [Docker Hub](https://hub.docker.com/r/osirrc2019/entitylinking).
 The [OSIRRC 2019 image library](https://github.com/osirrc/osirrc2019-library) contains a log of successful executions of this image.
 
-+ Supported topics: Any queries.  
 + Supported hooks: `init`, `index`, `search`
 
 ## Quick Start
@@ -36,16 +35,8 @@ Pass a dummy collection, this collection is not used in this docker :
 ```
 python3 run.py prepare \
     --repo osirrc2019/entitylinking \
-    --collections [name]=[path]=[format] 
-```
-
-For example :
-```
-python3 run.py prepare \
-    --repo osirrc2019/entitylinking \
     --collections robust04=path/to/robust004=trecweb 
 ```
-
 The following jig command can be used to perform an entity retrieval run:
 ```
 python run.py search \
