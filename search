@@ -27,36 +27,27 @@ try:
     lambdas='-l '+ args.json["opts"]["lambdas"]
 except:
     lambdas=''
-
 ###################
+
 print("hello")
-print(os.listdir('//elr_files//EntityLinkingRetrieval-ELR-master//data//'))
-print("babye")
-annotated_json_file='//elr_files//EntityLinkingRetrieval-ELR-master//data//extracted_annotation.json'
-os.chdir("//elr_files//EntityLinkingRetrieval-ELR-master//")
-
-files = os.listdir('data')
-for file in files:
-    shutil.copy(os.path.join('data', file), '/output')
-#######################
-    
 os.chdir("//elr_files//EntityLinkingRetrieval-ELR-master")
-print("sub1 start !!!!!!!!!!! ")
-sp1 = subprocess.Popen(['python query_extract_annotate.py {} '.format(topics)],shell=True)
-sp1.wait()
-
-print("first done")
+sb1=subprocess.Popen(['python query_extract_annotate.py {} '.format(args.json["topic"]["path"])],shell=True)
+sb1.wait()
 print(os.listdir('//elr_files//EntityLinkingRetrieval-ELR-master//data//'))
 query_json_file='//elr_files//EntityLinkingRetrieval-ELR-master//data//extracted_queries.json'
+print("extraction done ")
+
+#######################
 sb2=subprocess.Popen(["python  query_extract_annotate2.py {} ".format(query_json_file)],shell=True)
 sb2.wait()
+print(os.listdir('//elr_files//EntityLinkingRetrieval-ELR-master//data//'))
+annotaion_file="//elr_files//EntityLinkingRetrieval-ELR-master//data//rb04_topics_annotation.json"
+print("annotation done ")
 
 files = os.listdir('data')
 for file in files:
     shutil.copy(os.path.join('data', file), '/output')
     
-annotaion_file="//elr_files//EntityLinkingRetrieval-ELR-master//data//rb04_topics_annotation.json"
-print(os.listdir('//elr_files//EntityLinkingRetrieval-ELR-master//data//'))
 
 sp3 = subprocess.Popen(["python -m nordlys.elr.retrieval_elr -q query_json_file -a annotaion_file {}  {} {}  {}".format(mod,threshold,nfields,lambdas)],shell=True)
 sp3.wait()
