@@ -32,7 +32,7 @@ python run.py search \
   --qrels qrels/qrels.robust04.txt \
   --topic topics/topics.robust04.txt \
   --collection robust04 \
-  --opts model=model_name threshold=Entity_linking_threshold nfields=number_of_fields lambdas=lambdaE,lambdaU,lambdaO,LambdaT
+  --opts model=lm threshold=0.1 nfields=10 lambdas=0.1,0.05,0.05,0.8
 ```
   The arguments model, threshold, nfields and lambdas e can be customized.Acceptable values for the customized arguments are: 
   
@@ -57,7 +57,7 @@ python run.py search \
   Number of fields which is an integer number, default=10
     
    - lambdas
-   comma separated values for lambdas mentioned in the [paper](http://hasibi.com/files/ictir2016-elr.pdf) e.g, lambdaE,lambdaU,lambdaO,LambdaT which are float numbers.
+   comma separated values for lambdas mentioned in the [paper](http://hasibi.com/files/ictir2016-elr.pdf) e.g, lambdaE,lambdaU,lambdaO,LambdaT which are float numbers and lambdaE+ lambdaU+ lambdaO+ LambdaT =1 .
   
 
 ## Refrences
