@@ -33,7 +33,9 @@ os.chdir("//elr_files//EntityLinkingRetrieval-ELR-master")
 subprocess.run("python query_extract_annotate.py {} ".format(topics),shell=True)
 print("first done")
 print(os.listdir('//elr_files//EntityLinkingRetrieval-ELR-master//data//'))
-query_file="//elr_files//EntityLinkingRetrieval-ELR-master//data//extracted_queries.json"
+query_json_file='//elr_files//EntityLinkingRetrieval-ELR-master//data//extracted_queries.json'
+shutil.copy(query_json_file, '/output')
+
 annotaion_file="//elr_files//EntityLinkingRetrieval-ELR-master//data//rb04_topics_annotation.json"
 
 subprocess.run("python -m nordlys.elr.retrieval_elr -q query_file -a annotaion_file {}  {} {}  {}".format(mod,threshold,nfields,lambdas),shell=True)
