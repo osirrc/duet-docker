@@ -57,6 +57,7 @@ for file in files:
     shutil.copy(os.path.join('data', file), '/output')
     
 annotaion_file="//elr_files//EntityLinkingRetrieval-ELR-master//data//rb04_topics_annotation.json"
+print(os.listdir('//elr_files//EntityLinkingRetrieval-ELR-master//data//'))
 
 sp3 = subprocess.Popen(["python -m nordlys.elr.retrieval_elr -q query_json_file -a annotaion_file {}  {} {}  {}".format(mod,threshold,nfields,lambdas)],shell=True)
 sp3.wait()
