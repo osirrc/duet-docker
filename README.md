@@ -21,7 +21,7 @@ The following jig command can be used to install the requirements packages and i
 Pass a dummy collection, this collection is not used in this docker :
 ```
 python3 run.py prepare \
-    --repo osirrc2019/entitylinking \
+    --repo osirrc2019/entityretrieval \
     --collections robust04=path/to/robust004=trecweb 
 ```
 The following jig command can be used to perform an entity retrieval run:
