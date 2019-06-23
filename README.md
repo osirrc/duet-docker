@@ -34,10 +34,10 @@ python run.py search \
   --collection robust04 \
   --opts model=lm threshold=0.1 nfields=10 lambdas=0.1,0.05,0.05,0.8
 ```
-  The arguments model, threshold, nfields and lambdas e can be customized.Acceptable values for the customized arguments are: 
+  The arguments model[required], threshold[optional], nfields[optional] and lambdas[required for some models] can be customized. Acceptable values for the customized arguments are: 
   
    - model: 
-
+    
     - "lm"[2]
     - "mlm-tc"[3]
     - "mlm-all"[4] 
