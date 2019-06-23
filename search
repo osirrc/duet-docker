@@ -31,18 +31,9 @@ except:
 
 print("hello")
 os.chdir("//elr_files//EntityLinkingRetrieval-ELR-master")
-sb1=subprocess.Popen(['python query_extract_annotate.py {} '.format(args.json["topic"]["path"])],shell=True)
+sb1=subprocess.Popen(['python query_combine.py {} '.format(args.json["topic"]["path"])],shell=True)
 sb1.wait()
 print(os.listdir('//elr_files//EntityLinkingRetrieval-ELR-master//data//'))
-query_json_file='//elr_files//EntityLinkingRetrieval-ELR-master//data//extracted_queries.json'
-print("extraction done ")
-
-#######################
-sb2=subprocess.Popen(["python  query_extract_annotate2.py {} ".format(query_json_file)],shell=True)
-sb2.wait()
-print(os.listdir('//elr_files//EntityLinkingRetrieval-ELR-master//data//'))
-annotaion_file="//elr_files//EntityLinkingRetrieval-ELR-master//data//extracted_annotations.json"
-print("annotation done ")
 
 files = os.listdir('data')
 for file in files:
