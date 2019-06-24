@@ -29,11 +29,10 @@ except:
     lambdas=''
 ###################
 
-print("hello")
 os.chdir("//elr_files//EntityLinkingRetrieval-ELR-master")
 sb1=subprocess.Popen(['python query_combine.py {} '.format(args.json["topic"]["path"])],shell=True)
 sb1.wait()
-print(os.listdir('//elr_files//EntityLinkingRetrieval-ELR-master//data//'))
+#print(os.listdir('//elr_files//EntityLinkingRetrieval-ELR-master//data//'))
 
 files = os.listdir('data')
 for file in files:
