@@ -1,6 +1,6 @@
 # OSIRRC Docker Image for Entity Retrieval
 
-[![Build Status](https://travis-ci.com/osirrc/entitylinking-docker.svg?branch=master)](https://travis-ci.com/osirrc/entitylinking-docker)
+[![Build Status](https://travis-ci.com/osirrc/entityretrieval-docker.svg?branch=master)](https://travis-ci.com/osirrc/entityretrieval-docker)
 
 
 [**Negar Arabzadeh**](https://github.com/narabzad/)
