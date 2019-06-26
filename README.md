@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.com/osirrc/entityretrieval-docker.svg?branch=master)](https://travis-ci.com/osirrc/entityretrieval-docker)
 
 [**Negar Arabzadeh**](https://github.com/narabzad/)
-,
+and
 [**Faegheh Hasibi**](https://github.com/hasibi)
 
 
