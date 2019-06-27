@@ -35,7 +35,7 @@ python run.py search \
   --collection robust04 \
   --opts model=sdm_elr threshold=0.1 nfields=10 lambdas=0.1,0.05,0.05,0.8
 ```
-The output file name will be in the follwing format: 
+The output file will show up under the follwing file name format: 
 ```
 [Model][nfields]_th[threshold]_Lambda[lambdaE]_[lambdaU]_[lambdaO]_[LambdaT].treceval
 ```
