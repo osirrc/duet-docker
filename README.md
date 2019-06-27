@@ -37,9 +37,9 @@ python run.py search \
 ```
 The output file name will be in the follwing format: 
 ```
-[Model]_[nfields]_th[threshold]_Lambda[lambdaE]_[lambdaU]_[lambdaO]_[LambdaT].treceval
+[Model][nfields]_th[threshold]_Lambda[lambdaE]_[lambdaU]_[lambdaO]_[LambdaT].treceval
 ```
-For instance with the mentioned retrieval, the output would be : lml_elr_10_th0.1_0.1,0.05,0.05,0.8
+For instance with the mentioned retrieval, the output would be : edm_elr10_th0.1_0.1_0.05_0.05_0.8
 
   The arguments model[required], threshold[optional], nfields[optional] and lambdas[required for some models] can be customized. Acceptable values for the customized arguments are: 
   
