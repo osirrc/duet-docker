@@ -3,8 +3,6 @@
 [![Build Status](https://travis-ci.com/osirrc/entityretrieval-docker.svg?branch=master)](https://travis-ci.com/osirrc/entityretrieval-docker)
 
 [**Negar Arabzadeh**](https://github.com/narabzad/)
-and
-[**Faegheh Hasibi**](https://github.com/hasibi)
 
 
 This is the docker image for the Entity Retrieval conforming to the [OSIRRC jig](https://github.com/osirrc/jig/) for the [Open-Source IR Replicability Challenge (OSIRRC) at SIGIR 2019](https://osirrc.github.io/osirrc2019/).
